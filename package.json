@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "repository": {
-    "type": "git",
+    "type": "git", 
     "url": "git+https://github.com/microsoft/codespaces-teaching-template-js.git"
   },
   "author": "Microsoft",
