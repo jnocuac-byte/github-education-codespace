@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Educator JS Codespace Template",
   "source": "src/index.html",
-  "homepage": "http://jnocuac-byte.github.io/github-education-codespace",
+  "homepage": "https://jnocuac-byte.github.io/github-education-codespace",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "build-gh": "parcel build --public-url 'http://jnocuac-byte.github.io/github-education-codespace'",
+    "build-gh": "parcel build --public-url 'https://jnocuac-byte.github.io/github-education-codespace'",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
