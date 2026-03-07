@@ -14,9 +14,14 @@ body {
   width: 100%;
 }
 
-/* add a smooth scroll */
+/* add a smooth scroll and CSS-only target animation */
+:root {
+  --header-offset: 72px; /* ajustar según la altura real del header */
+  --nav-scroll-duration: 600ms; /* duración perceptual de la "entrada" */
+}
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
 }
 
 div#main {
@@ -48,6 +53,11 @@ section img.background {
   transform: translate(-50%, 0);
   width: 100vmax;
   z-index: -1;
+}
+
+/* make sure sections don't get hidden under the fixed header */
+section {
+  scroll-margin-top: var(--header-offset);
 }
 
 h1 {
@@ -155,4 +165,20 @@ img.socialIcon {
 /*Aplica la animación al contenedor de la flecha que creaste en Home.jsx */
 .scroll-arrow-container {
   animation: bounce 2s infinite;
+}
+
+/* CSS-only animation when navigating to an anchor using :target */
+@keyframes targetReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section:target {
+  animation: targetReveal var(--nav-scroll-duration) ease both;
 }
