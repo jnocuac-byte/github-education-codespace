@@ -44,7 +44,6 @@
     }
   },
 
-/*  
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts" 
@@ -53,7 +52,6 @@
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/azure-cli:1": {}
   },
-*/
 
   "portsAttributes": {
     "1234": {
